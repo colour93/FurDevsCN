@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<!--
+
+    FurDevsCN Index (https://github.com/FurDevsCN/FurDevsCN)
+
+    由大笨比 玖叁 (@colour93 https://github.com/colour93) 制作
+
+    欢迎加入小动物开发交流群 https://dev.furl.ltd
+
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FurDevsCN</title>
+</head>
+<style>
+    :root {
+        --gray: #707070;
+        --gray-dark: #383838;
+        --github-purple: #8241F9;
+        --qq-light-blue: #12B7F5;
+        --tg-blue: #279edb;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+    span,
+    p {
+        color: var(--gray);
+    }
+
+    .container {
+        text-align: center;
+    }
+
+    .logo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo img {
+        max-width: 150px;
+        width: auto;
+    }
+
+    .logo span {
+        margin: 3px;
+        font-size: 24px;
+        color: var(--gray-dark);
+    }
+
+    .contact {
+        margin-top: 40px;
+    }
+
+    .contact a {
+        text-decoration: none;
+        font-size: 18px;
+    }
+
+    a.github {
+        color: var(--github-purple);
+    }
+
+    a.qq {
+        color: var(--qq-light-blue)
+    }
+
+    a.telegram {
+        color: var(--tg-blue);
+    }
+
+    .bio {
+        margin: 20px 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: baseline;
+    }
+
+    .bio p,
+    .bio span {
+        margin: 0 10px;
+        font-size: 22px;
+    }
+
+    .bio-text {
+        display: inline-block;
+        position: relative;
+    }
+
+    .bio-text::after {
+        content: ' ';
+        position: absolute;
+        right: -6px;
+        top: 5px;
+        height: 22px;
+        width: 3px;
+        animation: insert 1s steps(1) infinite;
+    }
+
+    @keyframes insert {
+
+        0%,
+
+        100% {
+            background-color: var(--gray);
+        }
+
+        50% {
+            background-color: transparent;
+        }
+
+    }
+</style>
+
+<script>
+    window.onload = () => {
+        const text = document.querySelector('.bio-text');
+        const contentArray  = ["中国小动物开发社群", "Furry Developers in China"];
+        let i = 0;
+        let index = 0;
+        let change = true;
+        setInterval(()=>{
+            if (change) {
+                text.innerHTML = contentArray[index].slice(0, ++i);
+            } else {
+                text.innerHTML = contentArray[index].slice(0, i--);
+            }
+    
+            if (i == contentArray[index].length + 10) {
+                change = false;
+            } else if ( i < 0 ) {   
+                i = 0;
+                change = true;
+                index++;
+                if ( index >= contentArray.length ) { 
+                    text.innerHTML = "_";
+                    index = 0;
+                }
+            }
+    
+        }, 100)
+    }
+</script>
+
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="assets/temp_logo.png" alt="临时logo">
+            <span>FurDevsCN</span>
+        </div>
+        <div class="bio">
+            <span>/* </span>
+            <p class="bio-text">_</p>
+            <span> */</span>
+        </div>
+        <div class="contact">
+            <a href="https://github.com/FurDevsCN" class="github">GitHub @FurDevsCN</a>
+            <br>
+            <a href="https://jq.qq.com/?_wv=1027&k=QKvgHdm9" class="qq">QQ群 小动物开发/运维/搞机交流群</a>
+            <br>
+            <a href="https://t.me/+3K4rLqWajd41MmY1" class="telegram">Telegram FurDevsCN</a>
+        </div>
+    </div>
+</body>
+
+</html>
