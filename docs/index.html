@@ -5,7 +5,9 @@
 
     FurDevsCN Index (https://github.com/FurDevsCN/FurDevsCN)
 
-    由大笨比 玖叁 (@colour93 https://github.com/colour93) 制作
+    由以下成员制作
+
+    大笨比玖叁 (@colour93 https://github.com/colour93)
 
     欢迎加入小动物开发交流群 https://dev.furl.ltd
 
@@ -16,149 +18,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FurDevsCN</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
 </head>
-<style>
-    :root {
-        --gray-bg: #fbfbfb;
-        --gray: #707070;
-        --gray-dark: #383838;
-        --github-purple: #8241F9;
-        --qq-light-blue: #12B7F5;
-        --tg-blue: #279edb;
-    }
-
-    body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        margin: 0;
-        background-color: var(--gray-bg);
-    }
-
-    span,
-    p {
-        color: var(--gray);
-    }
-
-    .container {
-        text-align: center;
-    }
-
-    .logo {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .logo img {
-        max-width: 150px;
-        width: auto;
-    }
-
-    .logo span {
-        margin: 3px;
-        font-size: 24px;
-        color: var(--gray-dark);
-    }
-
-    .contact {
-        margin-top: 40px;
-    }
-
-    .contact a {
-        text-decoration: none;
-        font-size: 18px;
-    }
-
-    a.github {
-        color: var(--github-purple);
-    }
-
-    a.qq {
-        color: var(--qq-light-blue)
-    }
-
-    a.telegram {
-        color: var(--tg-blue);
-    }
-
-    .bio {
-        margin: 20px 0;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: baseline;
-    }
-
-    .bio p,
-    .bio span {
-        margin: 0 10px;
-        font-size: 22px;
-    }
-
-    .bio-text {
-        display: inline-block;
-        position: relative;
-    }
-
-    .bio-text::after {
-        content: ' ';
-        position: absolute;
-        right: -6px;
-        top: 5px;
-        height: 22px;
-        width: 3px;
-        animation: insert 1s steps(1) infinite;
-    }
-
-    @keyframes insert {
-
-        0%,
-
-        100% {
-            background-color: var(--gray);
-        }
-
-        50% {
-            background-color: transparent;
-        }
-
-    }
-</style>
-
-<script>
-    window.onload = () => {
-        const text = document.querySelector('.bio-text');
-        const contentArray  = ["中国小动物开发社群", "Furry Developers in China"];
-        let i = 0;
-        let index = 0;
-        let change = true;
-        setInterval(()=>{
-            if (change) {
-                text.innerHTML = contentArray[index].slice(0, ++i);
-            } else {
-                text.innerHTML = contentArray[index].slice(0, i--);
-            }
-    
-            if (i == contentArray[index].length + 10) {
-                change = false;
-            } else if ( i < 0 ) {   
-                i = 0;
-                change = true;
-                index++;
-                if ( index >= contentArray.length ) { 
-                    text.innerHTML = "_";
-                    index = 0;
-                }
-            }
-    
-        }, 100)
-    }
-</script>
 
 <body>
-    <div class="container">
+
+    <div class="page p-1">
         <div class="logo">
             <img src="assets/temp_logo.png" alt="临时logo">
             <span>FurDevsCN</span>
