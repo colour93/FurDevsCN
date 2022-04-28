@@ -84,7 +84,8 @@ p {
 }
 
 .contact {
-  margin-top: 70px;
+  margin-top: 30px;
+  display: flex;
 }
 
 .contact a {
@@ -97,18 +98,21 @@ p {
   width: 40px;
 }
 
-a.github span {
+a.github {
   color: var(--github-purple);
+  margin: 0px 10px;
   line-height: 40px;
 }
 
-a.qq span{
+a.qq {
   color: var(--qq-light-blue);
+  margin: 0px 10px;
   line-height: 40px;
 }
 
-a.telegram span{
+a.telegram {
   color: var(--tg-blue);
+  margin: 0px 10px;
   line-height: 40px;
 }
 
