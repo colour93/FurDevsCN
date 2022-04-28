@@ -15,7 +15,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   min-width: 500px;
   max-width: 600px;
   width: 40%;
@@ -94,16 +93,23 @@ p {
   font-size: 18px;
 }
 
-a.github {
+.svglogo{
+  width: 40px;
+}
+
+a.github span {
   color: var(--github-purple);
+  line-height: 40px;
 }
 
-a.qq {
+a.qq span{
   color: var(--qq-light-blue);
+  line-height: 40px;
 }
 
-a.telegram {
+a.telegram span{
   color: var(--tg-blue);
+  line-height: 40px;
 }
 
 .bio {
@@ -144,4 +150,26 @@ a.telegram {
   50% {
     background-color: transparent;
   }
+}
+
+.textcolor-gray{
+  color: var(--gray-dark);
+}
+.contact a{
+  background-color:rgb(217, 231, 203) ;
+  padding: 15px;
+  border-radius: 25px;
+  transition: .25s;
+  transition-property: all;
+  transition-duration: 0.25s;
+  transition-timing-function: ease;
+  transition-delay: 0s;
+}
+.contact a:hover{
+  background-color: rgb(205, 217, 191);
+  transition: .25s;
+  transition-property: all;
+  transition-duration: 0.25s;
+  transition-timing-function: ease;
+  transition-delay: 0s;
 }
