@@ -177,3 +177,14 @@ a.telegram {
   transition-timing-function: ease;
   transition-delay: 0s;
 }
+.contact a[aria-label]:hover:after {
+
+  content: attr(aria-label);
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  background-color:rgb(217, 231, 203) ;
+  width: 100%;
+  border-radius: 0px 0px 20px 20px;
+
+}
