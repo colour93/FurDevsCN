@@ -9,7 +9,7 @@ window.onload = () => {
     let index = 0;
 
     // 颜文字
-    const emotionArray = ["(*/ω＼*)", "( •̀ ω •́ )y", "( •̀ .̫ •́ )✧"];
+    const emotionArray = ["(*/ω＼*)", "( •̀ ω •́ )y", "( •̀ .̫ •́ )✧","ヽ(＊>∇<)ﾉ","ฅ"];
     let eIndex = 0;
 
     // 变向
