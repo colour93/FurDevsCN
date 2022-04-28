@@ -132,6 +132,8 @@ a.telegram {
 }
 
 .bio {
+  line-height: 30px;
+  height: 30px;
   margin: 20px 0;
   display: flex;
   flex-direction: row;
