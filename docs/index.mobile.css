@@ -1,0 +1,29 @@
+/*
+ * index.moblie.css
+ * 响应式
+ */
+
+@media screen and ( max-width: 414px ) and ( min-width: 0px ) {
+    .page::after {
+        content: '';
+        height: 20vh;
+    }
+
+    .card.card-intro {
+        width: 90vw;
+        min-width: 0;
+        padding: 0;
+    }
+
+    /* 第二页样式 */
+
+    .card.card-member {
+        max-height: 90vh;
+        max-width: 95vw;
+        padding: 1rem;
+    }
+
+    .card-member-item {
+        width: 100%;
+    }
+}
