@@ -8,8 +8,8 @@
     <title>FurDevsCN</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <script src="index.js"></script>
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index.mobile.css">
     <!--
 
     FurDevsCN Index (https://github.com/FurDevsCN/FurDevsCN)
@@ -29,12 +29,10 @@
 
 <body>
     <div class="page p-1">
-        <div class="card">
+        <div class="card card-intro">
             <div class="logo">
                 <p style="text-align: center;">
-
                     <img src="assets/temp_logo.png" alt="临时logo" width="100px" height="90px">
-
                 </p>
                 <span>FurDevsCN</span>
             </div>
@@ -43,11 +41,10 @@
                 <p class="bio-text">_</p>
                 <span> */</span>
             </div>
-
         </div>
     </div>
     <div class="fixed-navigationbar">
-        <div class="contact-card">
+        <div class="card contact-card">
             <div class="contact">
                 <a href="https://github.com/FurDevsCN" class="github">
                     <svg class="svglogo textcolor-gray"
@@ -80,10 +77,20 @@
                 </a>
             </div>
         </div>
-
     </div>
-    <div class="page p-2"></div>
+    <div class="page p-2">
+        <div class="card card-member">
+            <div class="card-member-list"></div>
+            <div class="card-member-desc">
+                <p>排名按照进入组织顺序</p>
+                <p>统计信息卡片来自于 <a href="https://github.com/anuraghazra/github-readme-stats" target="_blank">anuraghazra/github-readme-stats</a> 的由玖叁魔改后的 <a href="https://github.com/colour93/github-readme-stats" target="_blank">colour93/github-readme-stats</a></p>
+            </div>
+        </div>
+    </div>
 </body>
+<script src="https://fur233.oss-cn-hangzhou.aliyuncs.com/common/js/axios.min.js"></script>
+<script src="https://fur233.oss-cn-hangzhou.aliyuncs.com/common/js/headroom.min.js"></script>
+<script src="index.js"></script>
 <script src="https://static.furl.ltd/console.js"></script>
 
 </html>
