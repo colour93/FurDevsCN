@@ -29,7 +29,7 @@ function bioUpdate() {
     const text = document.querySelector('.bio-text');
 
     // 文本
-    const contentArray = ["中国小动物开发社群", "Furry Developers in China"];
+    const contentArray = ["趁喜欢，去热爱。", "中国小动物开发社群", "Furry Developers in China"];
     let index = 0;
 
     // 颜文字
